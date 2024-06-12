@@ -10,23 +10,6 @@
             Crie uma lista de tarefas
         </button>
     } @else {
-        <div>
-            <label 
-                class="input-label-text"
-                for="inputValue"
-            >
-                <input 
-                    type="text"
-                    placeholder="Adicione um novo item"
-                    autofocus
-                    id="inputValue"
-                />
-                <button 
-                    class="btn btn-primary-circle"
-                    title="Adicionar um novo item à lista de tarefas"
-                >
-                </button>
-            </label>
-        </div>
+        <app-input-add-item />
     }
 </div>
