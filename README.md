@@ -1,5 +1,5 @@
 
-# Gerador de senha
+# Lista de tarefas
 
 A Lista de tarefas é uma aplicação web interativa que permite aos usuários criar e gerenciar suas tarefas, sendo elas as mais variadas possíveis.
 
