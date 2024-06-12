@@ -8,7 +8,7 @@ import {
   ViewChild, 
   inject 
 } from '@angular/core';
-import { IListItens } from '../../interface/IListItens.interface';
+import { IListItems } from '../../interface/IListItens.interface';
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -23,8 +23,8 @@ export class InputAddItemComponent {
 
   @ViewChild('inputText') public inputText!: ElementRef
 
-  @Input({ required: true }) public inputListItems: Array<IListItens> = []
-  @Output() public outputAddListItem = new EventEmitter<IListItens>()
+  @Input({ required: true }) public inputListItems: Array<IListItems> = []
+  @Output() public outputAddListItem = new EventEmitter<IListItems>()
   public focusAndAddItem(value: string) {
     if (value) {
       this.#cdr.detectChanges()
