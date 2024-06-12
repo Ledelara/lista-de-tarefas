@@ -16,8 +16,8 @@ import { InputListItemComponent } from '../../components/input-list-item/input-l
 export class ListComponent {
   public addItem = signal(true);
 
-  #setListItens = signal<IListItems[]>(this.#parseItens());
-  public getListItems = this.#setListItens.asReadonly();
+  #setListItems = signal<IListItems[]>(this.#parseItens());
+  public getListItems = this.#setListItems.asReadonly();
 
   #parseItens() {
     return JSON.parse(localStorage.getItem('@my-list') || '[]');
@@ -25,10 +25,10 @@ export class ListComponent {
 
   public getInputAndAddItem(value: IListItems) {
     localStorage.setItem(
-      '@my-list', JSON.stringify([ ...this.#setListItens(), value ])
+      '@my-list', JSON.stringify([ ...this.#setListItems(), value ])
     );
 
-    return this.#setListItens.set(this.#parseItens());
+    return this.#setListItems.set(this.#parseItens());
   }
 
   public listItemsStage(value: 'pending' | 'completed') {
@@ -45,8 +45,23 @@ export class ListComponent {
     })
   }
 
+  public updateItemCheckbox(newItem: { id: string; checked: boolean }) {
+    this.#setListItems.update((oldValue: IListItems[]) => {
+      oldValue.filter((res) => {
+        if (res.id === newItem.id) {
+          res.checked = newItem.checked;
+          return res;
+        }
+        return res;
+      });
+      return oldValue;
+    });
+
+    return localStorage.setItem('@my-list', JSON.stringify(this.#setListItems()));
+  }
+
   public deleteAllItems() {
     localStorage.removeItem('@my-list');
-    return this.#setListItens.set(this.#parseItens());
+    return this.#setListItems.set(this.#parseItens());
   }
 }

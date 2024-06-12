@@ -7,6 +7,7 @@
             type="checkbox"
             #inputCheckbox
             [checked]="item.checked"
+            (input)="updateItemCheckbox(item.id, inputCheckbox.checked)"
         />
         <input 
             type="text"
