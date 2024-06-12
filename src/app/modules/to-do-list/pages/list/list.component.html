@@ -24,13 +24,23 @@
     />
 
     <main class="container">
-        <footer>
-            <button 
-                (click)="deleteAllItems()"
-                class="btn btn-danger"
-            >
-                Excluir todos os itens
-            </button>
-        </footer>
+        <h2>Pendências</h2>
+        <app-input-list-item 
+            [inputListItems]="getListItems()"
+        />
+
+        <h2>Concluídas</h2>
+        <app-input-list-item 
+            [inputListItems]="getListItems()"
+        />
     </main>
+
+    <footer>
+        <button 
+            (click)="deleteAllItems()"
+            class="btn btn-danger"
+        >
+            Excluir todos os itens
+        </button>
+    </footer>
 }
