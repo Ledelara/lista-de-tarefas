@@ -1,0 +1,21 @@
+<div>
+    <label 
+        class="input-label-text"
+        for="inputValue"
+    >
+        <input
+            (keyup.enter)="focusAndAddItem(inputText.value)"
+            type="text"
+            placeholder="Adicione um novo item"
+            autofocus
+            id="inputValue"
+            #inputText
+        />
+        <button
+            (click)="focusAndAddItem(inputText.value)"
+            class="btn btn-primary-circle"
+            title="Adicionar um novo item à lista de tarefas"
+        >
+        </button>
+    </label>
+</div>
