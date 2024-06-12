@@ -18,7 +18,7 @@ A Lista de tarefas é uma aplicação web interativa que permite aos usuários c
 
 ## Demonstração
 
-![Gif](https://i.ibb.co/MP6wZNr/Design-sem-nome.gif)
+![Gif](https://i.ibb.co/r5s8FyY/Design-sem-nome.gif)
 ## Stack utilizada
 
 - Angular.
