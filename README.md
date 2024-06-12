@@ -1,27 +1,79 @@
-# ListaDeTarefas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.2.
+# Gerador de senha
 
-## Development server
+A Lista de tarefas é uma aplicação web interativa que permite aos usuários criar e gerenciar suas tarefas, sendo elas as mais variadas possíveis.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Criar tarefa.
 
-## Build
+- Marcar/desmarcar tarefas, alterando o status para pendente ou concluída.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Excluir tarefas individualmente.
 
-## Running unit tests
+- Excluir todas as tarefas.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Demonstração
 
-## Further help
+![Gif](https://i.ibb.co/MP6wZNr/Design-sem-nome.gif)
+## Stack utilizada
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- Angular.
+
+- HTML.
+
+- SASS
+
+- SweetAlert2
+
+- TypeScript.
+
+## Deploy
+
+Para fazer o deploy desse projeto acesse o link do deploy na [Vercel](https://lista-de-tarefas-beta-one.vercel.app).
+
+
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  https://github.com/Ledelara/lista-de-tarefas.git
+```
+
+Entre no diretório do projeto
+
+```bash
+  cd lista-de-tarefas
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  ng server
+```
+
+Abra o navegador e acesse
+```bash
+  http://localhost:4200
+```
+
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests para melhorias, correções de bugs e novas funcionalidades.
+
+
+## Licença
+
+Este projeto está sob a licença [MIT](https://choosealicense.com/licenses/mit/)
+
