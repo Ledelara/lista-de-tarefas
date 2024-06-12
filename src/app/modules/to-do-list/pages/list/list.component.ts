@@ -15,7 +15,7 @@ export class ListComponent {
   public addItem = signal(true);
 
   #setListItens = signal<IListItens[]>(this.#parseItens());
-  public getListItens = this.#setListItens.asReadonly();
+  public getListItems = this.#setListItens.asReadonly();
 
   #parseItens() {
     return JSON.parse(localStorage.getItem('@my-list') || '[]');
@@ -26,6 +26,11 @@ export class ListComponent {
       '@my-list', JSON.stringify([ ...this.#setListItens(), value ])
     );
 
+    return this.#setListItens.set(this.#parseItens());
+  }
+
+  public deleteAllItems() {
+    localStorage.removeItem('@my-list');
     return this.#setListItens.set(this.#parseItens());
   }
 }
